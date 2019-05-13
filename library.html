@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en">
+        <link rel="stylesheet" type="text/css" href="resources/css/library.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet"> 
+        <title>Bookshelf: My library</title>
+    </head>
+    <body>
+        <header>
+        <nav class="row">
+            <div>
+                <h1 class="logo"><a href="index.html">Bookshelf</a></h1>
+                <ul class="other-nav">
+                   <li><a href="library.html">My Library</a></li> 
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                </ul> 
+            </div>
+        </nav>
+    </header>
+        
+    <section class="section-add_book">
+        <div class="">
+        <h3>Add a book:</h3>
+        </div>
+        <form>
+            
+                <div class="col span-1-of-2">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;Title:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" class="add_title">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;Authors:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" class="add_author">
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;Year:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" class="add_Year">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;ISBN 13:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" class="add_isbn13">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;ISBN 10:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" class="add_isbn10">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col span-1-of-2">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Summary:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea class="add_Summary"  rows="10" cols="5"></textarea>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+            <div class="row"> 
+                <div class="sub">
+                    <input type="Submit" class="btn btn-full" value="Add to the bookshelf"></input> 
+                </div> 
+            </div>
+        </form>
+    </section>
+    
+    <section class="section-library">
+        <div class="row"> <!-- isto k pr budgety -->
+            <table>
+                <tr>
+                    <th><h3>Title</h3></th>
+                    <th><h3>Author</h3></th>
+                    <th><h3>Year</h3></th>
+                    <th><h3>Summary</h3></th>
+                    <th><h3>ISBN 13</h3></th>
+                    <th><h3>ISBN 10</h3></th>
+                </tr>
+                <tr>
+                    <td><p>Obsidio</p></td>
+                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
+                    <td><p>2018</p></td>
+                    <td><p>Last book</p></td>
+                    <td><p>9780553499193</p></td>
+                    <td><p>055349919X</p></td>
+                </tr>
+                <tr>
+                    <td><p>Obsidio</p></td>
+                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
+                    <td><p>2018</p></td>
+                    <td><p>Last book</p></td>
+                    <td><p>9780553499193</p></td>
+                    <td><p>055349919X</p></td>
+                </tr>
+                <tr>
+                    <td><p>Obsidio</p></td>
+                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
+                    <td><p>2018</p></td>
+                    <td><p>Last book</p></td>
+                    <td><p>9780553499193</p></td>
+                    <td><p>055349919X</p></td>
+                </tr>
+                <tr>
+                    <td><p>Obsidio</p></td>
+                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
+                    <td><p>2018</p></td>
+                    <td><p>Last book</p></td>
+                    <td><p>9780553499193</p></td>
+                    <td><p>055349919X</p></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="library.html">My Library</a></li> 
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+               <ul class="social-links">
+                   <li><a href="#"></a><i class="icon ion-logo-facebook"></i></li>
+                   <li><a href="#"></a><i class="icon ion-logo-twitter"></i></li>
+                   <li><a href="#"></a><i class="icon ion-logo-instagram"></i></li>
+                </ul>
+            </div>
+                <div class="row">
+                    <p >Copyright &copy; 2019 by BookShelf. All rights reserved.</p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    </body>
+</html>

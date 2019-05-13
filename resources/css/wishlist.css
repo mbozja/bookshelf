@@ -1,0 +1,337 @@
+/*-------------------------*/
+
+/* Blue color: #1E88E5   */
+
+/* Edina razlika med library.css in wishlist.css je barva ozadja
+ a se res rabi celo samo zato da spremeni barvo ozadja? jQuery */
+
+/*-------------------------*/
+
+
+/* ------------------------------------------------------ */
+/* BASIC SETUP*/
+/* ------------------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+html,
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #555;
+    text-rendering: optimizeLegibility;
+    background-color: #fff0f0;
+}
+
+
+
+/* ------------------------------------------------------ */
+/* REUSABLE COMPONENTS*/
+/* ------------------------------------------------------ */
+
+h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 40px 0 20px 200px;
+    float: left;
+    color: #000;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 170%;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #1E88E5 ;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 120%;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1.5%;
+    text-align: center;
+}
+
+
+section {
+    padding: 20px 0;
+}
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box {
+    padding: 1%;
+}
+
+
+p {
+    font-size: 95%;
+    
+}
+
+/*  LINKS  */
+
+a:link,
+a:visited {
+    color: #1E88E5;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #1E88E5;
+    transition: border-bottom 0.2s, color:0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+/*  BUTTONS  */
+
+.btn:link,
+.btn:visited, 
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px; 
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #1E88E5;
+    border: 1px solid #1E88E5;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #1E88E5;
+    color: #1E88E5;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #1776ca;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit] {
+    border: 1px solid #1E88E5;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #1E88E5;
+    color: #fff;
+}
+
+/* ------------------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------------------ */
+
+header {
+    background-color: #fff;
+}
+
+.logo {
+    margin-left: 0;
+    font-size: 180%;
+    color: #000;
+}
+
+.other-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+    
+}
+
+.other-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    color: #000;
+}
+
+.other-nav li a:link,
+.other-nav li a:visited {
+    padding: 7px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 105%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.other-nav li a:hover,
+.other-nav li a:active {
+    border-bottom: 2px solid #1E88E5;
+} 
+
+
+
+
+
+
+/* ------------------------------------------------------ */
+/* LIBRARY */
+/* ------------------------------------------------------ */
+
+
+/* ADDING A BOOK */
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width:  1050px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+.section-add_book {
+    padding-bottom: 3%;
+}
+
+input[type=text],
+textarea[type=message],
+select {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+ textarea {
+    width: 330px;
+} 
+
+
+
+/* BOOK DETAILS */
+
+
+
+
+
+
+/* ------------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------------ */
+
+
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    font-size: 150%;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-instagram {
+    transition: color 0.2s;
+}
+
+
+.ion-logo-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-logo-twitter:hover {
+    color: #55acee;
+}
+
+
+
+.ion-logo-instagram:hover {
+    color: #fccc63;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
