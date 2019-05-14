@@ -223,7 +223,7 @@ header {
 
 
 /* ------------------------------------------------------ */
-/* LIBRARY */
+/* WISHLIST */
 /* ------------------------------------------------------ */
 
 
@@ -259,7 +259,7 @@ select {
 /* BOOK DETAILS */
 .book {
     max-width: 1140px;
-    background-color: #ffffff;
+    background-color: #fcfcfc;
     border-radius: 4px;
     box-shadow: 0 8px 25px 5px rgba(0,0,0,.2);
     
@@ -274,7 +274,7 @@ select {
 }
 
 .book__more--details {
-    flex: 0 0 20%;
+    flex: 0 0 22%;
     padding: 25px 25px;
 }
 
@@ -283,10 +283,21 @@ select {
     padding: 25px 25px;
 }
 
+.sum {
+    text-align: justify;
+    line-height: 1.2em;
+}
+
 .icon-book {
     font-size: 125%;
     padding-right: 10px;
     padding-bottom: 10px;
+}
+
+.icon-book-smaller {
+    font-size: 100%;
+    float: right;
+    padding-top: 15px;
 }
 
 /* ------------------------------------------------------ */

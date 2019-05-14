@@ -21,7 +21,7 @@ body {
     font-weight: 300;
     color: #555;
     text-rendering: optimizeLegibility;
-    background-color: #f0f0f0;
+    background-color: #f0dcff;
 }
 
 
@@ -217,6 +217,7 @@ header {
 /* LIBRARY */
 /* ------------------------------------------------------ */
 
+/* ADDING A BOOK */
 form {
   /* Just to center the form on the page */
   margin: 0 auto;
@@ -225,14 +226,12 @@ form {
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;
+  box-shadow: 0 8px 10px 5px rgba(0,0,0,.1);
+  background-color: #f8eeff;
 }
 
 .section-add_book {
     padding-bottom: 3%;
-}
-
-.section-add_book label {
-    
 }
 
 input[type=text],
@@ -247,25 +246,49 @@ select {
     width: 330px;
 } 
 
-/*  TABLE  -> vn šlo bo */
-.section-library div table {
-    border-collapse: collapse;
-    width: 100%;
+/* BOOK DETAILS */
+.book {
+    max-width: 1140px;
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    box-shadow: 0 8px 25px 5px rgba(0,0,0,.2);
+    
+    display: flex;
+    align-items: stretch;
 }
 
-.section-library div td, th {
-    border: 1px solid #1776ca;
-    text-align: center;
-    padding: 8px;
+.book__main--details {
+    flex: 0 0 25%;
+    flex-direction: column;
+    padding: 25px 25px;
 }
 
-tr:nth-child(even) {
-    background-color: #fff; /*  #d6ecff; */
+.book__more--details {
+    flex: 0 0 22%;
+    padding: 25px 25px;
 }
 
-table {
-    margin-bottom: 9%;
-} 
+.book__sum--details {
+    flex: 1;
+    padding: 25px 25px;
+}
+
+.sum {
+    text-align: justify;
+    line-height: 1.2em;
+}
+
+.icon-book {
+    font-size: 125%;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.icon-book-smaller {
+    font-size: 100%;
+    float: right;
+    padding-top: 15px;
+}
 
 
 

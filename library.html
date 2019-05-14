@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta lang="en">
+        <meta lang="en" charset="utf-8">
         <link rel="stylesheet" type="text/css" href="resources/css/library.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet"> 
         <title>Bookshelf: My library</title>
     </head>
@@ -26,7 +27,7 @@
         <div class="">
         <h3>Add a book:</h3>
         </div>
-        <form>
+        <form> <!-- cena, tags, slika, odtrani,  -->
             
                 <div class="col span-1-of-2">
                     <div class="row">
@@ -85,56 +86,38 @@
             
             <div class="row"> 
                 <div class="sub">
-                    <input type="Submit" class="btn btn-full" value="Add to the bookshelf">
+                    <input type="Submit" class="btn btn-full" value="Add to the library"> 
                 </div> 
             </div>
         </form>
     </section>
     
-    <section class="section-library">
-        <div class="row"> <!-- isto k pr budgety -->
-            <table>
-                <tr>
-                    <th><h3>Title</h3></th>
-                    <th><h3>Author</h3></th>
-                    <th><h3>Year</h3></th>
-                    <th><h3>Summary</h3></th>
-                    <th><h3>ISBN 13</h3></th>
-                    <th><h3>ISBN 10</h3></th>
-                </tr>
-                <tr>
-                    <td><p>Obsidio</p></td>
-                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
-                    <td><p>2018</p></td>
-                    <td><p>Last book</p></td>
-                    <td><p>9780553499193</p></td>
-                    <td><p>055349919X</p></td>
-                </tr>
-                <tr>
-                    <td><p>Obsidio</p></td>
-                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
-                    <td><p>2018</p></td>
-                    <td><p>Last book</p></td>
-                    <td><p>9780553499193</p></td>
-                    <td><p>055349919X</p></td>
-                </tr>
-                <tr>
-                    <td><p>Obsidio</p></td>
-                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
-                    <td><p>2018</p></td>
-                    <td><p>Last book</p></td>
-                    <td><p>9780553499193</p></td>
-                    <td><p>055349919X</p></td>
-                </tr>
-                <tr>
-                    <td><p>Obsidio</p></td>
-                    <td><p>Amie Kaufman, Jay Kristoff</p></td>
-                    <td><p>2018</p></td>
-                    <td><p>Last book</p></td>
-                    <td><p>9780553499193</p></td>
-                    <td><p>055349919X</p></td>
-                </tr>
-            </table>
+    <section class="section-wishlist">
+        <div class="row"> 
+            <!--  Namest tabele nej bo tko k pr budgety  -->
+             
+            <div class="wishlist__book--details">
+                <h3 class="list-title">Book details</h3>
+                
+                <div class="book-details">
+                    <div class="book clearfix" id="book-0">
+                        <div class="book__main--details">
+                            <div class="book-title"><p><i class="fas fa-book icon-book"></i>Obsidio</p></div><br>
+                            <div class="book-author"><p><i class="fas fa-pen-fancy icon-book"></i>Amie Kaufman, Jay Kristoff</p></div><br>
+                            <div class="book-year"><p><i class="far fa-calendar-alt icon-book"></i>2018</p></div>
+                        </div>
+                        <div class="book__more--details">
+                            <div class="book-isbn13"><p><i class="fas fa-barcode icon-book"></i>13:&nbsp;9780553499193</p></div><br>
+                            <div class="book-isbn10"><p><i class="fas fa-barcode icon-book"></i>10:&nbsp;055349919X</p></div>
+                        </div>
+                        <div class="book__sum--details">
+                            <div class="book__sum--heading"><i class="fas fa-bars icon-book"></i></div>
+                            <div class="book-sum"><p class="sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae magna quis elit aliquet ultricies vitae nec ipsum. Nullam nec ligula ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur pellentesque faucibus dignissim. Fusce ac ultrices diam. Donec ultrices porta venenatis.</p></div>
+                            <div class="book__sum--footer"><i class="fas fa-ellipsis-h icon-book-smaller"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -155,7 +138,7 @@
                 </ul>
             </div>
                 <div class="row">
-                    <p >Copyright &copy; 2019 by BookShelf. All rights reserved.</p>
+                    <p >Copyright &copy; 2019 by Bookshelf. All rights reserved.</p>
                 </div>
             </div>
     </footer>
