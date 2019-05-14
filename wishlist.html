@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet"> 
         <title>Bookshelf: Wishlist</title>
     </head>
@@ -91,21 +92,27 @@
         </form>
     </section>
     
-    <section class="section-library">
+    <section class="section-wishlist">
         <div class="row"> 
             <!--  Namest tabele nej bo tko k pr budgety  -->
-            <!-- S tem, da na začetku je malo lastnosti. Ko klikneš gor prikaže še ostale lastnosti -->
              
             <div class="library__book--details">
                 <h3 class="list-title">Book details</h3>
                 
                 <div class="book-details">
                     <div class="book clearfix" id="book-0">
-                        <div class="book-title">Obsidio</div>
-                        <div class="book-author">Amie Kaufman, Jay Kristoff</div>
-                        <div class="book-year">2018</div>
-                        <div class="book-isbn13">9780553499193</div>
-                        <div class="book-isbn10">055349919X</div>
+                        <div class="book__main--details">
+                            <div class="book-title"><p><i class="fas fa-book icon-book"></i>Obsidio</p></div><br>
+                            <div class="book-author"><p><i class="fas fa-pen-alt icon-book"></i>Amie Kaufman, Jay Kristoff</p></div><br>
+                            <div class="book-year"><p><i class="far fa-calendar-alt icon-book"></i>2018</p></div>
+                        </div>
+                        <div class="book__more--details">
+                            <div class="book-isbn13"><p><i class="fas fa-barcode icon-book"></i>9780553499193</p></div><br>
+                            <div class="book-isbn10"><p><i class="fas fa-barcode icon-book"></i>055349919X</p></div>
+                        </div>
+                        <div class="book__sum--details">
+                            <div class="book-sum"><p><i class="fas fa-bars icon-book"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae magna quis elit aliquet ultricies vitae nec ipsum. Nullam nec ligula ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur pellentesque faucibus dignissim. Fusce ac ultrices diam. Donec ultrices porta venenatis.</p> </div>
+                        </div>
                     </div>
                 </div>
             </div>
