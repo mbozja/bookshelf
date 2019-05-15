@@ -21,7 +21,7 @@ body {
     font-weight: 300;
     color: #555;
     text-rendering: optimizeLegibility;
-    background-color: #f0dcff;
+    background-color: #f0dcff; /* #f0dcff; */
 }
 
 
@@ -227,7 +227,7 @@ form {
   border: 1px solid #CCC;
   border-radius: 1em;
   box-shadow: 0 8px 10px 5px rgba(0,0,0,.1);
-  background-color: #f8eeff;
+  background-color: #f8eeff; /* #f8eeff; */
 }
 
 .section-add_book {

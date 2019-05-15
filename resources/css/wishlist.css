@@ -30,7 +30,7 @@ body {
     font-weight: 300;
     color: #555;
     text-rendering: optimizeLegibility;
-    background-color: #ffe7e7;
+    background-color: #e5351e2c; /* #e5351e; #ffe7e7; */
 }
 
 
@@ -237,7 +237,7 @@ form {
   border: 1px solid #CCC;
   border-radius: 1em;
   box-shadow: 0 8px 10px 5px rgba(0,0,0,.1);
-  background-color: #fff5f5;
+  background-color: #e5991e; /* #e5991e; #fff5f5 */
 }
 
 .section-add_book {
