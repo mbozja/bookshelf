@@ -335,10 +335,16 @@ select {
 }
 .icon-book-edit,
 .icon-book-delete {
-    display: felx;
-    margin-top: 60%;
+    margin-top: 50%;
 }
 
+.other-details {
+    display: block;
+}
+
+.do-more {
+    display: block;
+}
 .icon-book-edit {
     float: left;
 }
