@@ -30,7 +30,7 @@ body {
     font-weight: 300;
     color: #555;
     text-rendering: optimizeLegibility;
-    background-color: rgba(229, 53, 30, 0.35); /* #e5351e; #ffe7e7; */
+    background-color: rgba(59, 163, 255, 0.36);
 }
 
 /* BACKGROUND: https://css-tricks.com/snippets/css/transparent-background-images/ */
@@ -255,7 +255,7 @@ form {
   border: 1px solid #CCC;
   border-radius: 1em;
   box-shadow: 0 8px 10px 5px rgba(0,0,0,.1);
-  background-color: rgba(229, 153, 30, 0.12); /* #e5991e; #fff5f5 */
+  background-color: rgba(10, 86, 153, 0.32); 
   /* background */  
   display: block;
   position: relative;
@@ -319,20 +319,45 @@ select {
 
 .sum {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.1em;
+}
+
+.book__other--details {
+    flex: 1;
+    padding: 25px 25px;
 }
 
 .icon-book {
     font-size: 125%;
+    padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
 }
+.icon-book-edit,
+.icon-book-delete {
+    display: felx;
+    margin-top: 60%;
+}
 
-.icon-book-smaller {
+.icon-book-edit {
+    float: left;
+}
+
+.icon-book-delete {
+    float: right;
+}
+
+/*.icon-book-smaller {
     font-size: 100%;
     float: right;
     padding-top: 15px;
-}
+} */
+
+
+
+
+
+
 
 /* ------------------------------------------------------ */
 /* FOOTER */
