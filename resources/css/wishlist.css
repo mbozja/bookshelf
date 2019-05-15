@@ -23,15 +23,32 @@
     clear: both;
 }
 
-html,
+
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 300;
     color: #555;
     text-rendering: optimizeLegibility;
-    background-color: rgba(229, 53, 30, 0.20); /* #e5351e; #ffe7e7; */
-    background-image: url(../../vendors/css/img/sos.png);
+    background-color: rgba(229, 53, 30, 0.35); /* #e5351e; #ffe7e7; */
+}
+
+/* BACKGROUND: https://css-tricks.com/snippets/css/transparent-background-images/ */
+.background {
+  display: block;
+  position: relative;
+}
+
+.background::after {
+  content: "";
+  background: url(../../vendors/css/img/sos.png); /* Background pattern from Toptal Subtle Patterns */
+  opacity: 0.80;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 
@@ -239,6 +256,22 @@ form {
   border-radius: 1em;
   box-shadow: 0 8px 10px 5px rgba(0,0,0,.1);
   background-color: rgba(229, 153, 30, 0.12); /* #e5991e; #fff5f5 */
+  /* background */  
+  display: block;
+  position: relative;
+}
+
+/* background */
+form::after {
+    content: "";
+    background: url(../../vendors/css/img/spiration-light.png); /* Background pattern from Toptal Subtle Patterns */
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .section-add_book {
