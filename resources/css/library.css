@@ -272,6 +272,11 @@ form::after {
     padding-bottom: 3%;
 }
 
+
+.adding-book {
+    font-weight: 400;
+}
+
 input[type=text],
 textarea[type=message],
 select {
@@ -285,6 +290,16 @@ select {
 } 
 
 /* BOOK DETAILS */
+
+.list-title {
+    font-weight: 400;
+    margin-bottom: 2.5%;
+}
+
+.book-details {
+    padding-bottom: 2.5%;
+}
+
 .book {
     max-width: 1140px;
     background-color: #fcfcfc;
