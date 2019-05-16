@@ -313,19 +313,35 @@ select {
 
 .sum {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.1em;
+}
+
+.book__other--details {
+    flex: 1;
+    padding: 25px 25px;
 }
 
 .icon-book {
     font-size: 125%;
+    padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
 }
+.icon-book-edit,
+.icon-book-delete {
+    margin-top: 50%;
+}
 
-.icon-book-smaller {
-    font-size: 100%;
+.other-details {
+    display: block;
+}
+
+.icon-book-edit {
+    float: left;
+}
+
+.icon-book-delete {
     float: right;
-    padding-top: 15px;
 }
 
 
