@@ -15,12 +15,7 @@ var UIController = (function() {
 //GLOBAL APP CONTROLLER
 var controller = (function(detailsCtrl, UICtrl) {
 
-    document.querySelector('.sub').addEventListener('click', function() {
-        //When pressed it shows for only a second, 
-        //background goes for a second to orange
-        //does not stay in the console
-        console.log('Button was pressed.'); 
-
+    var ctrlAddBook = function() {
         // 1. Get the filed input data
 
         // 2. Add a book to the details controller
@@ -28,7 +23,17 @@ var controller = (function(detailsCtrl, UICtrl) {
         // 3. Add a book to the UI
 
         // 4. Display a book on the UI
-        
+
+        //ze na začetku je, ne dela pravilno
+        console.log('It works!');
+    }
+
+    document.querySelector('.add-btn').addEventListener('click', ctrlAddBook() );
+
+    document.addEventListener('keypress', function(event) {
+        if(event.keyCode === 13 || event.which === 13) {
+            ctrlAddBook();
+        }
     });
 
 }) (detailsController, UIController);
