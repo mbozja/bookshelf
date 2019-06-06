@@ -15,8 +15,15 @@ var detailsController = (function() {
     
 }) ();
 
+//UI Controller
 var UiController = (function() {
 
     //some code
+
+}) ();
+
+//controller
+var controller = (function() {
+
 
 }) ();
