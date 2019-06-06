@@ -1,29 +1,34 @@
-//BookDetails Controller
+//DETAILS CONTROLLER - bookDetails
 var detailsController = (function() {
 
-    var x = 23;
-
-    var add = function(a) {
-        return x + a;
-    };
-
-    return {
-        publicTest: function(b) {
-            console.log(add(b));
-        }
-    }
+    //Some code
     
 }) ();
 
-//UI Controller
-var UiController = (function() {
+//UI CONTROLLER
+var UIController = (function() {
 
-    //some code
-
-}) ();
-
-//controller
-var controller = (function() {
-
+    //Some code
 
 }) ();
+
+//GLOBAL APP CONTROLLER
+var controller = (function(detailsCtrl, UICtrl) {
+
+    document.querySelector('.sub').addEventListener('click', function() {
+        //When pressed it shows for only a second, 
+        //background goes for a second to orange
+        //does not stay in the console
+        console.log('Button was pressed.'); 
+
+        // 1. Get the filed input data
+
+        // 2. Add a book to the details controller
+
+        // 3. Add a book to the UI
+
+        // 4. Display a book on the UI
+        
+    });
+
+}) (detailsController, UIController);
