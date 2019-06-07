@@ -31,7 +31,7 @@ var UIController = (function() {
                 summary: document.querySelector(DOMstrings.inputSummary).value,
                 price: document.querySelector(DOMstrings.inputPrice).value,
                 genre: document.querySelector(DOMstrings.inputGenre).value,
-                file: document.querySelector(DOMstrings.inputFile).value
+                file: document.querySelector(DOMstrings.inputFile)
             };
         }
     };
@@ -58,7 +58,7 @@ var controller = (function(detailsCtrl, UICtrl) {
         //console.log('It works!');
     }
 
-    document.getElementById("#add-btn").addEventListener("click", ctrlAddBook());
+    document.getElementById('#add-btn').addEventListener('click', ctrlAddBook());
 
     /* 
     document.addEventListener('keypress', function(event) {
