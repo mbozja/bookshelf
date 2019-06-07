@@ -33,6 +33,10 @@ var UIController = (function() {
                 genre: document.querySelector(DOMstrings.inputGenre).value,
                 file: document.querySelector(DOMstrings.inputFile)
             };
+        },
+
+        getDOMstrings: function() {
+            return DOMstrings;
         }
     };
 
