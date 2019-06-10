@@ -17,7 +17,8 @@ var UIController = (function() {
         inputSummary: '.add_summary',
         inputPrice: '.add_price',
         inputGenre: '.add_genre',
-        inputFile: '.box__file'
+        inputFile: '.box__file',
+        inputBtn: '#add-btn'
     };
 
     return {
@@ -45,6 +46,8 @@ var UIController = (function() {
 //GLOBAL APP CONTROLLER
 var controller = (function(detailsCtrl, UICtrl) {
 
+    var DOM = UICtrl.getDOMstrings();
+
     var ctrlAddBook = function() {
         //ze na zacetku :/ namest pol ko das input dejasnko notr
         // 1. Get the filed input data
@@ -62,7 +65,7 @@ var controller = (function(detailsCtrl, UICtrl) {
         //console.log('It works!');
     }
 
-    document.getElementById('#add-btn').addEventListener('click', ctrlAddBook());
+    document.getElementById(DOM.inputBtn).addEventListener('click', ctrlAddBook);
 
     /* 
     document.addEventListener('keypress', function(event) {
