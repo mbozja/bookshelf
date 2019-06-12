@@ -70,7 +70,7 @@ var UIController = (function() {
         getInput: function() {
             return {
                 //type: books or wishlist
-                type: document.querySelector(DOMstrings.inputType).value,
+                type: document.querySelector(DOMstrings.inputType).value, // library ali wishlist
                 title: document.querySelector(DOMstrings.inputTitle).value,
                 author: document.querySelector(DOMstrings.inputAuthor).value,
                 year: document.querySelector(DOMstrings.inputYear).value,
