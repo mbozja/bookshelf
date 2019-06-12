@@ -285,7 +285,8 @@ form::after {
 /* TODO: ko klikne na wishlist
 .display {
     visibility: hidden;
-} */
+} 
+*/
 
 input[type=text],
 textarea[type=message],

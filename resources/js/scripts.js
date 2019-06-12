@@ -110,7 +110,7 @@ var controller = (function(detailsCtrl, UICtrl) {
         var input = UICtrl.getInput();
 
         // 2. Add a book to the details controller
-        newBook = detailsCtrl.addBook
+        //newBook = detailsCtrl.addBook
 
         // 3. Add a book to the UI
 
