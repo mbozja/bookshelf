@@ -1,7 +1,8 @@
 //DETAILS CONTROLLER - bookDetails
 var detailsController = (function() {
 
-    var Book = function(title, authors, year, isbn13, isbn10, summary, price, genre, file) {
+    var Book = function(type, title, authors, year, isbn13, isbn10, summary, price, genre, file) {
+        this.type = type;
         this.title = title;
         this.authors = authors;
         this.year = year;
@@ -13,7 +14,8 @@ var detailsController = (function() {
         this.file = file;
     }
 
-    var Wishlist = function(title, authors, year, isbn13, isbn10, summary, price, genre, file) {
+    var Wishlist = function(type, title, authors, year, isbn13, isbn10, summary, price, genre) {
+        this.type = type;
         this.title = title;
         this.authors = authors;
         this.year = year;
@@ -22,7 +24,6 @@ var detailsController = (function() {
         this.summary = summary;
         this.price = price;
         this.genre = genre;
-        this.file = file;
     }
 
     //data of library books(books) and wishlist books(wishlist)
@@ -35,7 +36,16 @@ var detailsController = (function() {
             books: 0,
             wishlist: 0
         }
-    }
+    };
+
+    /*
+    return {
+        addBook: function(titl, auth, yea, isb13, isb10, sum, pric, genr, fil) {
+            var newBook;
+
+            newBook: new Book(titl, auth, yea, isb13, isb10, sum, pric, genr, fil)
+        }
+    } */
     
 }) ();
 
@@ -43,6 +53,7 @@ var detailsController = (function() {
 var UIController = (function() {
 
     var DOMstrings = {
+        inputType: '.add_type',
         inputTitle: '.add_title',
         inputAuthor: '.add_author',
         inputYear: '.add_year',
@@ -58,6 +69,8 @@ var UIController = (function() {
     return {
         getInput: function() {
             return {
+                //type: books or wishlist
+                type: document.querySelector(DOMstrings.inputType).value,
                 title: document.querySelector(DOMstrings.inputTitle).value,
                 author: document.querySelector(DOMstrings.inputAuthor).value,
                 year: document.querySelector(DOMstrings.inputYear).value,
@@ -68,6 +81,10 @@ var UIController = (function() {
                 genre: document.querySelector(DOMstrings.inputGenre).value,
                 file: document.querySelector(DOMstrings.inputFile)
             };
+        },
+
+        addListBook: function(obj, type) {
+            
         },
 
         getDOMstrings: function() {
@@ -93,6 +110,7 @@ var controller = (function(detailsCtrl, UICtrl) {
         var input = UICtrl.getInput();
 
         // 2. Add a book to the details controller
+        newBook = detailsCtrl.addBook
 
         // 3. Add a book to the UI
 

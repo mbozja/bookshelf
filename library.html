@@ -27,7 +27,13 @@
         
     <div class="background">
         <section class="section-add_book">
-        <h3 class="adding-book">Add a book:</h3>
+        <h3 class="adding-book">Add a book to 
+            <select class="add_type">
+                <option value="library" selected>Library</option>
+                <option value="wishlist">Wishlist</option>
+            </select>
+        </h3>
+        
         <form> <!-- cena, tags, slika, odtrani,  -->
             
                 <div class="col span-1-of-2">
@@ -98,7 +104,7 @@
                             <input type="text" class="add_genre"> 
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row display">
                         <div class="col span-1-of-3">
                             <label>Upload book:</label>
                         </div>

@@ -282,6 +282,11 @@ form::after {
     font-weight: 400;
 }
 
+/* TODO: ko klikne na wishlist
+.display {
+    visibility: hidden;
+} */
+
 input[type=text],
 textarea[type=message],
 select {
