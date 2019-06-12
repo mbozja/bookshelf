@@ -1,7 +1,41 @@
 //DETAILS CONTROLLER - bookDetails
 var detailsController = (function() {
 
-    //Some code
+    var Book = function(title, authors, year, isbn13, isbn10, summary, price, genre, file) {
+        this.title = title;
+        this.authors = authors;
+        this.year = year;
+        this.isbn13 = isbn13;
+        this.isbn10 = isbn10;
+        this.summary = summary;
+        this.price = price;
+        this.genre = genre;
+        this.file = file;
+    }
+
+    var Wishlist = function(title, authors, year, isbn13, isbn10, summary, price, genre, file) {
+        this.title = title;
+        this.authors = authors;
+        this.year = year;
+        this.isbn13 = isbn13;
+        this.isbn10 = isbn10;
+        this.summary = summary;
+        this.price = price;
+        this.genre = genre;
+        this.file = file;
+    }
+
+    //data of library books(books) and wishlist books(wishlist)
+    var data = {
+        allBookItems: {
+            books: [],
+            wishlist: []
+        },
+        totals: {
+            books: 0,
+            wishlist: 0
+        }
+    }
     
 }) ();
 
@@ -57,8 +91,6 @@ var controller = (function(detailsCtrl, UICtrl) {
         //ze na zacetku :/ namest pol ko das input dejasnko notr
         // 1. Get the filed input data
         var input = UICtrl.getInput();
-        console.log(input);
-
 
         // 2. Add a book to the details controller
 
