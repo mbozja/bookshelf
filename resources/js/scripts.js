@@ -46,7 +46,12 @@ var UIController = (function() {
 //GLOBAL APP CONTROLLER
 var controller = (function(detailsCtrl, UICtrl) {
 
-    var DOM = UICtrl.getDOMstrings();
+    var setupEventListeners = function() {
+
+        var DOM = UICtrl.getDOMstrings();
+
+        document.getElementById(DOM.inputBtn).addEventListener('click', ctrlAddBook);
+    }
 
     var ctrlAddBook = function() {
         //ze na zacetku :/ namest pol ko das input dejasnko notr
@@ -65,14 +70,16 @@ var controller = (function(detailsCtrl, UICtrl) {
         //console.log('It works!');
     }
 
-    document.getElementById(DOM.inputBtn).addEventListener('click', ctrlAddBook);
-
-    /* 
-    document.addEventListener('keypress', function(event) {
-        if(event.keyCode === 13 || event.which === 13) {
-            ctrlAddBook();
+    return {
+        init: function() {
+            console.log('Application has started.');
+            setupEventListeners();
         }
-    });
-    */
+    };
+
+   
 
 }) (detailsController, UIController);
+
+
+controller.init();
