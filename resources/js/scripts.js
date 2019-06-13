@@ -148,14 +148,18 @@ var UIController = (function() {
              var libr = document.getElementById('library_display');
              var wishl = document.getElementById('wishlist_display');
          
+             //Check if it is already unchecked
+
+             
+             //Check if is checkbox checked and display content
              if (checkBox.checked == true) {
                 console.log('wishlist');
                 wishl.style.display = 'block';
                 libr.style.display = 'none';
              } else {
                 console.log('library');
-                libr.style.display = 'none';
-                wishl.style.display = 'block';
+                wishl.style.display = 'none';
+                libr.style.display = 'block';
              }
         })
 
