@@ -306,13 +306,13 @@ select {
     margin-bottom: 3%;
 }
 
-.lib {
+.library {
     float: left;
     margin-top: 6px;
     padding-left: 41%;
     font-weight: 400;
 }
-.wish {
+.wishlist {
     float: right;
     margin-top: 6px;
     padding-right: 41%;
@@ -388,7 +388,8 @@ border-radius: 50%;
     margin-bottom: 2.5%;
 }
 
-.book-details {
+.book_details-0,
+.book_details-1  {
     padding-bottom: 2.5%;
 }
 

@@ -123,8 +123,9 @@ var UIController = (function() {
             //newHtml = newHtml.replace('%tags%', obj.tags);
             newHtml = newHtml.replace('%price%', obj.price);
             newHtml = newHtml.replace('%genre%', obj.genre);
-            newHtml = newHtml.replace('%yfile%', obj.file);
+            newHtml = newHtml.replace('%file%', obj.file);
             //Insert the HTML into the DOM
+
         },
 
         getDOMstrings: function() {
