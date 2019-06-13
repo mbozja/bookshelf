@@ -393,6 +393,10 @@ border-radius: 50%;
     padding-bottom: 2.5%;
 }
 
+.book_details-1 {
+    display: none;
+}
+
 .book {
     max-width: 1140px;
     background-color: #fcfcfc;
@@ -401,6 +405,10 @@ border-radius: 50%;
     
     display: flex;
     align-items: stretch;
+}
+
+#wishlist_display {
+    display: none;
 }
 
 .book__main--details {

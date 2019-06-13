@@ -26,7 +26,7 @@
         
     <div class="background">
         <section class="section-add_book">
-        <h3 class="adding-book">Add a book to 
+        <h3 class="adding-book">Add a book to the
             <select class="add_type">
                 <option value="lib" selected>Library</option>
                 <option value="wish">Wishlist</option>
@@ -128,15 +128,15 @@
                 <div class="middle">
                     <p class="library">Library</p>
                     <label class="switch" >
-                            <input type="checkbox">
+                            <input type="checkbox" id="checkboxLibWish" >
                             <span  class="slider round" ></span>
                     </label>
                     <p class="wishlist">Wishlist</p>
                 </div>
                 <h3 class="list-title">Book details</h3>
                 
-                <div class="book_details-0"> 
-                    <!--<div class="book clearfix" id="book-0">
+                <div class="book_details-0" id="library_display"> 
+                    <div class="book clearfix" id="book-0">
                         <div class="book__main--details">
                             <div class="book-title"><p><i class="fas fa-book icon-book"></i>Obsidio</p></div><br>
                             <div class="book-author"><p><i class="fas fa-pen-fancy icon-book"></i>Amie Kaufman, Jay Kristoff</p></div><br>
@@ -162,11 +162,10 @@
                                 <div class="book-edit"><i class="fas fa-edit icon-book-edit"></i></div>
                                 <div class="book-delete"><i class="fas fa-trash-alt icon-book-delete"></i></div>
                             </div>
-                        </div> -->
+                        </div> 
 
-                        
                         </div>
-                        <!-- <div class="book_details-1" >
+                        <div class="book_details-1" id="wishlist_display">
                             <div class="book clearfix" id="wish-0">
                         <div class="book__main--details">
                             <div class="book-title"><p><i class="fas fa-book icon-book"></i>Aurora Rising</p></div><br>
@@ -192,8 +191,7 @@
                                 <div class="book-delete"><i class="fas fa-trash-alt icon-book-delete"></i></div>
                             </div>
                         </div>
-                    </div>  -->
-                        </div>
+                    </div>  
                     </div>  
                 </div>
             </div>

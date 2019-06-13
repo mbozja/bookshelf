@@ -85,7 +85,9 @@ var UIController = (function() {
         inputPrice: '.add_price',
         inputGenre: '.add_genre',
         inputFile: '.box__file',
-        inputBtn: '#add-btn'
+        inputBtn: '#add-btn',
+        libraryContainer: '.book_details-0',
+        wishlistContainer: '.book_details-1'
     };
 
     return {
@@ -105,11 +107,15 @@ var UIController = (function() {
         },
 
         addListBook: function(obj, type) {
-            var html, newHtml;
+            var html, newHtml, element;
             //Create HTML string with placeholder text
             if (type === 'lib') {
+                element = DOMstrings.libraryContainer;
+
                 html = '<div class="book clearfix" id="book-%id%"><div class="book__main--details"><div class="book-title"><p><i class="fas fa-book icon-book"></i>%title%</p></div><br><div class="book-author"><p><i class="fas fa-pen-fancy icon-book"></i>%author%</p></div><br><div class="book-year"><p><i class="far fa-calendar-alt icon-book"></i>%year%</p></div></div><div class="book__more--details"><div class="book-isbn13"><p><i class="fas fa-barcode icon-book"></i>13:&nbsp;%isbn13%</p></div><br><div class="book-isbn10"><p><i class="fas fa-barcode icon-book"></i>10:&nbsp;%isbn10%</p></div><div class="book-tags"><p><i class="fas fa-hashtag icon-book"></i>%tags%</p></div></div><div class="book__sum--details"><div class="book__sum--heading"><i class="fas fa-bars icon-book"></i></div><div class="book-sum"><p class="sum">%sum%</p></div><div class="book__sum--footer"></div></div><div class="book__other--details"><div class="other-details"><div class="book-price"><p><i class="fas fa-money-bill-wave icon-book"></i>%price%</p></div><div class="book-genre"><p><i class="fas fa-dungeon icon-book"></i>%genre%</p></div><div class="book-file"><p><i class="far fa-file-alt icon-book"></i>%file%</p></div></div><div class="do-more"><div class="book-edit"><i class="fas fa-edit icon-book-edit"></i></div><div class="book-delete"><i class="fas fa-trash-alt icon-book-delete"></i></div></div></div>';
             } else if (type === 'wish') {
+                element = DOMstrings.wishlistContainer;
+
                 html = '<div class="book clearfix" id="wish-%id%"><div class="book__main--details"><div class="book-title"><p><i class="fas fa-book icon-book"></i>%title%</p></div><br><div class="book-author"><p><i class="fas fa-pen-fancy icon-book"></i>%author%</p></div><br><div class="book-year"><p><i class="far fa-calendar-alt icon-book"></i>%year%</p></div></div><div class="book__more--details"><div class="book-isbn13"><p><i class="fas fa-barcode icon-book"></i>13:&nbsp;%isbn13%</p></div><br><div class="book-isbn10"><p><i class="fas fa-barcode icon-book"></i>10:&nbsp;%isbn10%</p></div><div class="book-tags"><p><i class="fas fa-hashtag icon-book"></i>%tags%</p></div></div><div class="book__sum--details"><div class="book__sum--heading"><i class="fas fa-bars icon-book"></i></div><div class="book-sum"><p class="sum">%sum%</p></div><div class="book__sum--footer"></div></div><div class="book__other--details"><div class="other-details"><div class="book-price"><p><i class="fas fa-money-bill-wave icon-book"></i>%price%</p></div><div class="book-genre"><p><i class="fas fa-dungeon icon-book"></i>%genre%</p></div></div><div class="do-more"><div class="book-edit"><i class="fas fa-edit icon-book-edit"></i></div><div class="book-delete"><i class="fas fa-trash-alt icon-book-delete"></i></div></div></div>';
             }
             
@@ -124,13 +130,32 @@ var UIController = (function() {
             newHtml = newHtml.replace('%price%', obj.price);
             newHtml = newHtml.replace('%genre%', obj.genre);
             newHtml = newHtml.replace('%file%', obj.file);
-            //Insert the HTML into the DOM
 
+            //Insert the HTML into the DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
 
         getDOMstrings: function() {
             return DOMstrings;
-        }
+        },
+
+        switchDisplayWishLib: function() {
+
+            //We get checkbox
+            var checkBox = document.getElementById('checkboxLibWish');
+        
+            //Get both output texts
+            var libr = document.getElementById('library_display');
+            var wishl = document.getElementById('wishlist_display');
+        
+            if(checkBox.checked == true) {
+                libr.style.display = 'block';
+            } else {
+                wishl.style.display = 'none';
+            }
+            }
+
+        
     };
 
 }) ();
@@ -155,6 +180,7 @@ var controller = (function(detailsCtrl, UICtrl) {
         newItemBook = detailsCtrl.addBook(input.type, input.title, input.author, input.year, input.isbn13, input.isbn10, input.summary, input.price, input.genre, input.file);
 
         // 3. Add a book to the UI
+        UICtrl.newItemBook(addBook, input.type);
 
         // 4. Display a book on the UI
 
