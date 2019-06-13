@@ -301,6 +301,7 @@ select {
 } 
 
 /* BUTTON */
+
 .middle {
     text-align: center;
     margin-bottom: 3%;
@@ -340,8 +341,8 @@ left: 0;
 right: 0;
 bottom: 0;
 background-color: #ccc;
--webkit-transition: .4s;
-transition: .4s;
+-webkit-transition: .2s;
+transition: .2s;
 }
   
 .slider:before {
@@ -352,8 +353,8 @@ width: 26px;
 left: 4px;
 bottom: 4px;
 background-color: white;
--webkit-transition: .4s;
-transition: .4s;
+-webkit-transition: .2s;
+transition: .2s;
 }
   
 input:checked + .slider {
@@ -405,10 +406,6 @@ border-radius: 50%;
     
     display: flex;
     align-items: stretch;
-}
-
-#wishlist_display {
-    display: none;
 }
 
 .book__main--details {

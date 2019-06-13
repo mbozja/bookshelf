@@ -139,21 +139,25 @@ var UIController = (function() {
             return DOMstrings;
         },
 
-        switchDisplayWishLib: function() {
+        checkboxLibWish: document.getElementById('checkboxLibWish').addEventListener('click', function() {
 
-            //We get checkbox
+            //Get the checkbox
             var checkBox = document.getElementById('checkboxLibWish');
-        
-            //Get both output texts
-            var libr = document.getElementById('library_display');
-            var wishl = document.getElementById('wishlist_display');
-        
-            if(checkBox.checked == true) {
-                libr.style.display = 'block';
-            } else {
-                wishl.style.display = 'none';
-            }
-            }
+
+             //Get both output texts
+             var libr = document.getElementById('library_display');
+             var wishl = document.getElementById('wishlist_display');
+         
+             if (checkBox.checked == true) {
+                console.log('wishlist');
+                wishl.style.display = 'block';
+                libr.style.display = 'none';
+             } else {
+                console.log('library');
+                libr.style.display = 'none';
+                wishl.style.display = 'block';
+             }
+        })
 
         
     };
