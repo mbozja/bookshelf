@@ -139,7 +139,7 @@ var UIController = (function() {
             return DOMstrings;
         },
 
-        checkboxLibWish: document.getElementById('checkboxLibWish').addEventListener('click', function() {
+        switchDisplayLibWish: function() {
 
             //Get the checkbox
             var checkBox = document.getElementById('checkboxLibWish');
@@ -148,9 +148,6 @@ var UIController = (function() {
              var libr = document.getElementById('library_display');
              var wishl = document.getElementById('wishlist_display');
          
-             //Check if it is already unchecked
-
-             
              //Check if is checkbox checked and display content
              if (checkBox.checked == true) {
                 console.log('wishlist');
@@ -161,7 +158,7 @@ var UIController = (function() {
                 wishl.style.display = 'none';
                 libr.style.display = 'block';
              }
-        })
+        }
 
         
     };
@@ -176,6 +173,8 @@ var controller = (function(detailsCtrl, UICtrl) {
         var DOM = UICtrl.getDOMstrings();
 
         document.getElementById(DOM.inputBtn).addEventListener('click', ctrlAddBook);
+
+        document.getElementById('checkboxLibWish').addEventListener('click', UICtrl.switchDisplayLibWish);
     }
 
     var ctrlAddBook = function() {
@@ -202,9 +201,12 @@ var controller = (function(detailsCtrl, UICtrl) {
         }
     };
 
+
    
 
 }) (detailsController, UIController);
 
 
 controller.init();
+UIController.switchDisplayLibWish();
+
