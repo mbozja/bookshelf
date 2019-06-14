@@ -127,6 +127,7 @@ var UIController = (function() {
             newHtml = newHtml.replace('%isbn13%', obj.isb13);
             newHtml = newHtml.replace('%isbn10%', obj.isbn10);
             //newHtml = newHtml.replace('%tags%', obj.tags);
+            newHtml = newHtml.replace('%sum%', obj.summary);
             newHtml = newHtml.replace('%price%', obj.price);
             newHtml = newHtml.replace('%genre%', obj.genre);
             newHtml = newHtml.replace('%file%', obj.file);
@@ -139,27 +140,41 @@ var UIController = (function() {
             return DOMstrings;
         },
 
+        //To display correct book details
         switchDisplayLibWish: function() {
 
             //Get the checkbox
             var checkBox = document.getElementById('checkboxLibWish');
 
-             //Get both output texts
-             var libr = document.getElementById('library_display');
-             var wishl = document.getElementById('wishlist_display');
-         
-             //Check if is checkbox checked and display content
-             if (checkBox.checked == true) {
-                console.log('wishlist');
-                wishl.style.display = 'block';
-                libr.style.display = 'none';
-             } else {
-                console.log('library');
-                wishl.style.display = 'none';
-                libr.style.display = 'block';
-             }
-        }
+            //Get both output texts
+            var libr = document.getElementById('library_display');
+            var wishl = document.getElementById('wishlist_display');
+        
+            //Check if is checkbox checked and display content
+            if (checkBox.checked == true) {
+            wishl.style.display = 'block';
+            libr.style.display = 'none';
+            } else {
+            wishl.style.display = 'none';
+            libr.style.display = 'block';
+            }
+        },
 
+        //To display book details according to dropdown selection of option
+        parallelFormDetails: function() {
+
+            var dropdown = document.getElementById('select_type');
+            var checkBox = document.getElementById('checkboxLibWish');
+
+            //Display book details accordingly
+            if (dropdown.selectedOptions[0].value === 'wish') {
+                checkBox.checked = true;
+            } else {
+                checkBox.checked = false;
+            }
+            var event = new Event('change');
+            checkBox.dispatchEvent(event);
+        }
         
     };
 
@@ -174,7 +189,9 @@ var controller = (function(detailsCtrl, UICtrl) {
 
         document.getElementById(DOM.inputBtn).addEventListener('click', ctrlAddBook);
 
-        document.getElementById('checkboxLibWish').addEventListener('click', UICtrl.switchDisplayLibWish);
+        document.getElementById('checkboxLibWish').addEventListener('change', UICtrl.switchDisplayLibWish);
+
+        document.getElementById('select_type').addEventListener('change', UICtrl.parallelFormDetails);
     }
 
     var ctrlAddBook = function() {
@@ -187,7 +204,7 @@ var controller = (function(detailsCtrl, UICtrl) {
         newItemBook = detailsCtrl.addBook(input.type, input.title, input.author, input.year, input.isbn13, input.isbn10, input.summary, input.price, input.genre, input.file);
 
         // 3. Add a book to the UI
-        UICtrl.newItemBook(addBook, input.type);
+        UICtrl.addListBook(newItemBook, input.type);
 
         // 4. Display a book on the UI
 
