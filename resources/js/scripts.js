@@ -234,7 +234,7 @@ var controller = (function(detailsCtrl, UICtrl) {
 
     var ctrlDeleteBook = function(event) {
 
-        //console.log(event.target.parentNode)
+        console.log(event.target.parentNode.parentNode.parentNode.parentNode.id);
     };
 
     return {
