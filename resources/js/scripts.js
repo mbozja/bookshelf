@@ -122,9 +122,9 @@ var UIController = (function() {
             //Replace the placeholder text with some actual data
             newHtml = html.replace('%id%', obj.id);
             newHtml = newHtml.replace('%title%', obj.title);
-            newHtml = newHtml.replace('%author%', obj.author);
+            newHtml = newHtml.replace('%author%', obj.authors);
             newHtml = newHtml.replace('%year%', obj.year);
-            newHtml = newHtml.replace('%isbn13%', obj.isb13);
+            newHtml = newHtml.replace('%isbn13%', obj.isbn13);
             newHtml = newHtml.replace('%isbn10%', obj.isbn10);
             //newHtml = newHtml.replace('%tags%', obj.tags);
             newHtml = newHtml.replace('%sum%', obj.summary);
