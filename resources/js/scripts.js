@@ -87,7 +87,8 @@ var UIController = (function() {
         inputFile: '.box__file',
         inputBtn: '#add-btn',
         libraryContainer: '.book_details-0',
-        wishlistContainer: '.book_details-1'
+        wishlistContainer: '.book_details-1',
+        wrapper: '.wrapper'
     };
 
     return {
@@ -210,6 +211,8 @@ var controller = (function(detailsCtrl, UICtrl) {
         document.getElementById('select_type').addEventListener('change', UICtrl.parallelFormDetails);
 
         document.getElementById('select_type').addEventListener('change', UICtrl.hideUploadBook);
+
+        document.querySelector(DOM.wrapper).addEventListener('click', ctrlDeleteBook);
     }
 
     var ctrlAddBook = function() {
@@ -227,7 +230,12 @@ var controller = (function(detailsCtrl, UICtrl) {
         // 4. Display a book on the UI
 
         
-    }
+    };
+
+    var ctrlDeleteBook = function(event) {
+
+        //console.log(event.target.parentNode)
+    };
 
     return {
         init: function() {
