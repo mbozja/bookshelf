@@ -174,6 +174,22 @@ var UIController = (function() {
             }
             var event = new Event('change');
             checkBox.dispatchEvent(event);
+        },
+
+        //To hide upload book when user changes form to wishlist
+        hideUploadBook: function() {
+
+            var uploadBook = document.getElementById('upload_book');
+            var dropdown = document.getElementById('select_type');
+
+            if (dropdown.selectedOptions[0].value === 'wish') {
+                uploadBook.style.visibility = 'hidden';
+            } else {
+                uploadBook.style.visibility = 'visible';
+            }
+            var event = new Event('change');
+            uploadBook.dispatchEvent(event);
+
         }
         
     };
@@ -192,6 +208,8 @@ var controller = (function(detailsCtrl, UICtrl) {
         document.getElementById('checkboxLibWish').addEventListener('change', UICtrl.switchDisplayLibWish);
 
         document.getElementById('select_type').addEventListener('change', UICtrl.parallelFormDetails);
+
+        document.getElementById('select_type').addEventListener('change', UICtrl.hideUploadBook);
     }
 
     var ctrlAddBook = function() {
