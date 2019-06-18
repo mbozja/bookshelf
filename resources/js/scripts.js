@@ -64,6 +64,23 @@ var detailsController = (function() {
             return newBook;
         },
 
+        deleteBook: function(type, id) {
+            var ids, index;
+
+            //data.allBookItems[type][id];
+
+            ids = data.allBookItems[type].map(function(current) { //Cannot read property 'map' of undefined
+                return current.id;
+            });
+
+            index = ids.indexOf(id);
+
+            if (index !== -1) {
+                data.allBookItems[type].splice(index, 1);
+            }
+
+        },
+
         testing: function() {
             console.log(data);
         }
@@ -244,11 +261,12 @@ var controller = (function(detailsCtrl, UICtrl) {
             ID = splitID[1];
 
             // 1. Delete a book from data structure
+            detailsCtrl.deleteBook(type, ID); //Cannot read property 'map' of undefined
 
             // 2. Delete a book from UI
 
             // 3. Update the new book details
-            
+
         }
     };
 
