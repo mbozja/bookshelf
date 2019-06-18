@@ -233,8 +233,23 @@ var controller = (function(detailsCtrl, UICtrl) {
     };
 
     var ctrlDeleteBook = function(event) {
+        var bookID, splitID, type, ID;
 
-        console.log(event.target.parentNode.parentNode.parentNode.parentNode.id);
+        bookID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+
+        if (bookID) {
+
+            splitID = bookID.split('-');
+            type = splitID[0];
+            ID = splitID[1];
+
+            // 1. Delete a book from data structure
+
+            // 2. Delete a book from UI
+
+            // 3. Update the new book details
+            
+        }
     };
 
     return {
