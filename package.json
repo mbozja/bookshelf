@@ -27,7 +27,8 @@
     "css-loader": "3.3.2",
     "node-sass": "4.13.0",
     "sass-loader": "8.0.0",
-    "style-loader": "1.0.1"
+    "style-loader": "1.0.1",
+    "prettier": "1.19.1"
   },
   "dependencies": {
     "babel-polyfill": "6.26.0"

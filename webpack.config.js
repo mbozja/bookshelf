@@ -20,6 +20,11 @@ module.exports = {
       {
         from: Path.resolve(__dirname, "./src/index.html"),
         to: ""
+      },
+      {
+        test: /\.html$/,
+        from: Path.resolve(__dirname, "./src/app/views"),
+        to: "app/views"
       }
     ])
   ],

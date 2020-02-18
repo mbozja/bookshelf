@@ -1,0 +1,76 @@
+/* ------------------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------------------ */
+
+.header-on-index {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.8)),
+    url("/assets/resources/img/Bookshelf.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.logo {
+  margin-left: 0;
+  margin-top: 3.5%;
+  font-size: 180%;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+  color: #fff;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 7px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 105%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #1e88e5;
+}
+
+.bookshelf {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bookshelf h1 {
+  font-size: 195%;
+}
+
+/* ------------------------------------------------------ */
+/* OFFERS */
+/* ------------------------------------------------------ */
+
+.section-offers {
+  background-color: #eaeaea;
+}
+
+/* ------------------------------------------------------ */
+/*  ICONS  */
+/* ------------------------------------------------------ */
+
+.icon-big {
+  font-size: 180%;
+  display: block;
+  color: #1e88e5;
+  margin-bottom: 10px;
+}
