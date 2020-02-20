@@ -1,163 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta lang="en" charset="utf-8">
-        <link rel="icon" size="16x16" type="image/ico" href="/assets/resources/img/Google-Noto-Emoji-Objects-62858-closed-book.ico">
-        <link rel="stylesheet" type="text/css" href="/assets/vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="/assets/vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="/assets/vendors/css/ionicons.min.css">
-        <link rel="stylesheet" type="text/css" href="/app/views/library/library.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet"> 
-        <title>Bookshelf: My library</title>
-    </head>
-    <body class="body-library">
-        <header class="header-views">
-        <nav class="row">
-            <div>
-                <h1 class="logo"><a href="/index.html">Bookshelf</a></h1>
-                <ul class="other-nav">
-                    <li><a href="../books/books.html">Books</a></li> 
-                    <li><a href="library.html">My Library</a></li>
-                    <li><a href="../authors/authors.html">Authors</a></li>
-                    <li><a href="#">Log out</a></li>
-                </ul> 
-            </div>
-        </nav>
-    </header>
-        
-    <div class="background">
-    
-    <section class="section-library">
-        <div class="row"> 
-             
-            <div class="wrapper">
-                <div class="library__book--details">
-                    <div class="middle">
-                        <p class="library">Library</p>
-                        <label class="switch" >
-                                <input type="checkbox" id="checkboxLibWish" >
-                                <span  class="slider round" ></span>
-                        </label>
-                        <p class="wishlist">Wishlist</p>
-                    </div>
-                    <h3 class="list-title">Book details</h3>
-                    
-                    <div class="book_details-0" id="library_display"> 
-                      <!--  <div class="book clearfix" id="book-0">
-                            <div class="book__main--details">
-                                <div class="book-title"><p><i class="fas fa-book icon-book"></i>Obsidio</p></div><br>
-                                <div class="book-author"><p><i class="fas fa-pen-fancy icon-book"></i>Amie Kaufman, Jay Kristoff</p></div><br>
-                                <div class="book-year"><p><i class="far fa-calendar-alt icon-book"></i>2018</p></div>
-                            </div>
-                            <div class="book__more--details">
-                                <div class="book-isbn13"><p><i class="fas fa-barcode icon-book"></i>13:&nbsp;9780553499193</p></div><br>
-                                <div class="book-isbn10"><p><i class="fas fa-barcode icon-book"></i>10:&nbsp;055349919X</p></div>
-                                 <div class="book-tags"><p><i class="fas fa-hashtag icon-book"></i>space, corporation</p></div> 
-                            </div>
-                            <div class="book__sum--details">
-                                <div class="book__sum--heading"><i class="fas fa-bars icon-book"></i></div>
-                                <div class="book-sum"><p class="sum"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur eu turpis a iaculis. Aenean rutrum sapien at metus auctor, ac viverra ipsum porta. Aenean a commodo risus, in venenatis lectus. Cras iaculis congue risus non vehicula. Maecenas ac ipsum dapibus, mollis metus dignissim, posuere ligula. Duis </p></div>
-                                <div class="book__sum--footer"></div>
-                            </div>
-                            <div class="book__other--details">
-                                <div class="other-details">
-                                    <div class="book-price"><p><i class="fas fa-money-bill-wave icon-book"></i>21</p></div>
-                                    <div class="book-genre"><p><i class="fas fa-dungeon icon-book"></i>sci-fi</p></div>
-                                    <div class="book-file"><p><i class="far fa-file-alt icon-book"></i>x</p></div>
-                                </div>
-                                <div class="do-more">
-                                    <div class="book-edit"><i class="fas fa-edit icon-book-edit"></i></div>
-                                    <div class="book-delete"><i class="fas fa-trash-alt icon-book-delete"></i></div> --><!-- Change in working button -->
-                               <!-- </div>
-                            </div>
-                        </div> 
-
-                    <div class="book clearfix" id="book-1">
-                        <div class="book__main--details">
-                            <div class="book-title"><p><i class="fas fa-book icon-book"></i>Evil Librarian</p></div><br>
-                            <div class="book-author"><p><i class="fas fa-pen-fancy icon-book"></i>Michelle Knudsen</p></div><br>
-                            <div class="book-year"><p><i class="far fa-calendar-alt icon-book"></i>2014</p></div>
-                        </div>
-                        <div class="book__more--details">
-                            <div class="book-isbn13"><p><i class="fas fa-barcode icon-book"></i>13:&nbsp;9780553499193</p></div><br>
-                            <div class="book-isbn10"><p><i class="fas fa-barcode icon-book"></i>10:&nbsp;055349919X</p></div>
-                             <div class="book-tags"><p><i class="fas fa-hashtag icon-book"></i>friendship, demons</p></div> 
-                        </div>
-                        <div class="book__sum--details">
-                            <div class="book__sum--heading"><i class="fas fa-bars icon-book"></i></div>
-                            <div class="book-sum"><p class="sum"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur eu turpis a iaculis. Aenean rutrum sapien at metus auctor, ac viverra ipsum porta. Aenean a commodo risus, in venenatis lectus. Cras iaculis congue risus non vehicula. Maecenas ac ipsum dapibus, mollis metus dignissim, posuere ligula. Duis </p></div>
-                            <div class="book__sum--footer"></div>
-                        </div>
-                        <div class="book__other--details">
-                            <div class="other-details">
-                                <div class="book-price"><p><i class="fas fa-money-bill-wave icon-book"></i>11.90</p></div>
-                                <div class="book-genre"><p><i class="fas fa-dungeon icon-book"></i>fantasy</p></div>
-                                <div class="book-file"><p><i class="far fa-file-alt icon-book"></i>x</p></div>
-                            </div>
-                            <div class="do-more">
-                                <div class="book-edit"><i class="fas fa-edit icon-book-edit"></i></div>
-                                <div class="book-delete"><i class="fas fa-trash-alt icon-book-delete"></i></div>
-                            </div>
-                        </div>
-                    </div>  -->
-                </div>
-
-                <div class="book_details-1" id="wishlist_display">
-                 <!--   <div class="book clearfix" id="wish-0">
-                        <div class="book__main--details">
-                            <div class="book-title"><p><i class="fas fa-book icon-book"></i>Aurora Rising</p></div><br>
-                            <div class="book-author"><p><i class="fas fa-pen-fancy icon-book"></i>Amie Kaufman, Jay Kristoff</p></div><br>
-                            <div class="book-year"><p><i class="far fa-calendar-alt icon-book"></i>2019</p></div>
-                        </div>
-                        <div class="book__more--details">
-                            <div class="book-isbn13"><p><i class="fas fa-barcode icon-book"></i>13:&nbsp;9781524720964</p></div><br>
-                            <div class="book-isbn10"><p><i class="fas fa-barcode icon-book"></i>10:&nbsp;
-                                1524720968</p></div>
-                        </div>
-                        <div class="book__sum--details">
-                            <div class="book__sum--heading"><i class="fas fa-bars icon-book"></i></div>
-                            <div class="book-sum"><p class="sum"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis congue risus non vehicula. Maecenas ac ipsum dapibus, mollis metus dignissim, posuere ligula. Duis </p></div>
-                        </div>
-                        <div class="book__other--details">
-                            <div class="other-details">
-                                <div class="book-price"><p><i class="fas fa-money-bill-wave icon-book"></i>21</p></div>
-                                <div class="book-genre"><p><i class="fas fa-dungeon icon-book"></i>sci-fi</p></div>
-                            </div>
-                            <div class="do-more">
-                                <div class="book-edit"><i class="fas fa-edit icon-book-edit"></i></div>
-                                <div class="book-delete"><i class="fas fa-trash-alt icon-book-delete"></i></div>
-                            </div>
-                        </div>
-                    </div>  
-                
-                </div> -->
-            </div>
+  <head>
+    <meta lang="en" charset="utf-8" />
+    <link
+      rel="icon"
+      size="16x16"
+      type="image/ico"
+      href="/assets/resources/img/Google-Noto-Emoji-Objects-62858-closed-book.ico"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendors/css/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendors/css/grid.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendors/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/app/views/library/library.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500"
+      rel="stylesheet"
+    />
+    <title>Bookshelf: My library</title>
+  </head>
+  <body class="body-library">
+    <header class="header-views">
+      <nav class="row">
+        <div>
+          <h1 class="logo"><a href="/index.html">Bookshelf</a></h1>
+          <ul class="other-nav">
+            <li><a href="/app/views/books/books.html">Books</a></li>
+            <li><a href="/app/views/library/library.html">My Library</a></li>
+            <li><a href="/app/views/authors/authors.html">Authors</a></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
         </div>
-            
-    </section>
-    
+      </nav>
+    </header>
+
+    <div class="view-content-wrapper">
+      TODO: Here will be list of books that user added to his library.
+    </div>
+
     <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#">About us</a></li>
+          </ul>
+        </div>
+        <div class="col span-1-of-2">
+          <ul class="social-links">
+            <li><a href="#"></a><i class="icon ion-logo-facebook"></i></li>
+            <li><a href="#"></a><i class="icon ion-logo-twitter"></i></li>
+            <li><a href="#"></a><i class="icon ion-logo-instagram"></i></li>
+          </ul>
+        </div>
         <div class="row">
-            <div class="col span-1-of-2">
-                <ul class="footer-nav">
-                    <li><a href="library.html">My Library</a></li> 
-                    <li><a href="#">About us</a></li>
-                </ul>
-            </div>
-            <div class="col span-1-of-2">
-               <ul class="social-links">
-                   <li><a href="#"></a><i class="icon ion-logo-facebook"></i></li>
-                   <li><a href="#"></a><i class="icon ion-logo-twitter"></i></li>
-                   <li><a href="#"></a><i class="icon ion-logo-instagram"></i></li>
-                </ul>
-            </div>
-                <div class="row">
-                    <p >Copyright &copy; 2019 by Bookshelf. All rights reserved.</p>
-                </div>
-            </div>
+          <p>Copyright &copy; 2019 by Bookshelf. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-    <script src="/assets/resources/js/scripts.js"></script>
+
     <script src="/main.js"></script>
-    </body>
+  </body>
 </html>

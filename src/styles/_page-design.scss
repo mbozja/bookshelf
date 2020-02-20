@@ -61,10 +61,6 @@ h3 {
   margin-bottom: 6%;
 }
 
-section {
-  padding: 80px 0;
-}
-
 .row {
   max-width: 1140px;
   margin: 0 auto;
@@ -98,63 +94,77 @@ a:active {
 }
 
 /* ------------------------------------------------------ */
-/*  BUTTONS  */
-/* ------------------------------------------------------ */
-
-.btn:link,
-.btn:visited,
-input[type="submit"],
-input[type="button"] {
-  display: inline-block;
-  padding: 10px 30px;
-  font-weight: 300;
-  text-decoration: none;
-  border-radius: 200px;
-  transition: background-color 0.2s, border 0.2s, color 0.2s;
-}
-
-.btn-full:link,
-.btn-full:visited,
-input[type="submit"],
-input[type="button"] {
-  background-color: #1e88e5;
-  border: 1px solid #1e88e5;
-  color: #fff;
-  margin-right: 15px;
-}
-
-.btn-ghost:link,
-.btn-ghost:visited {
-  border: 1px solid #1e88e5;
-  color: #1e88e5;
-}
-
-.btn:hover,
-.btn:active,
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="button"]:hover,
-input[type="button"]:active {
-  background-color: #1776ca;
-}
-
-.btn-full:hover,
-.btn-full:active,
-input[type="submit"],
-input[type="button"] {
-  border: 1px solid #1e88e5;
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-  border: 1px solid #1e88e5;
-  color: #fff;
-}
-
-/* ------------------------------------------------------ */
 /* HEADER */
 /* ------------------------------------------------------ */
 
 .header-views {
   background-color: #fff;
+
+  h1 {
+    color: #000;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 180%;
+    color: #000;
+  }
+
+  .logo a:link,
+  .logo a:visited {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .logo a:hover,
+  .logo a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+  }
+
+  .other-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+  }
+
+  .other-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    color: #000;
+  }
+
+  .other-nav li a:link,
+  .other-nav li a:visited {
+    padding: 7px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 105%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+  }
+
+  .other-nav li a:hover,
+  .other-nav li a:active {
+    border-bottom: 2px solid #1e88e5;
+  }
+}
+
+/* BACKGROUND: https://css-tricks.com/snippets/css/transparent-background-images/ */
+.view-content-wrapper {
+  display: block;
+  position: relative;
+}
+
+.view-content-wrapper::after {
+  content: "";
+  background: url("/assets/vendors/css/img/sos.png"); /* Background pattern from Toptal Subtle Patterns */
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
