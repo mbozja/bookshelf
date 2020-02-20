@@ -1,18 +1,5 @@
-/*-------------------------*/
-
-/* Blue color: #1E88E5   */
-
-/* Edina razlika med library.css in wishlist.css je barva ozadja
- a se res rabi celo samo zato da spremeni barvo ozadja? jQuery */
-
-/*-------------------------*/
-
-/* ------------------------------------------------------ */
-/* BASIC SETUP */
-/* ------------------------------------------------------ */
-
 body {
-  background-color: rgba(59, 163, 255, 0.36);
+  background-color: rgba(230, 152, 30, 0.52);
 }
 
 /* BACKGROUND: https://css-tricks.com/snippets/css/transparent-background-images/ */
@@ -21,6 +8,7 @@ body {
   position: relative;
 }
 
+/* BACKGROUND */
 .background::after {
   content: "";
   background: url("/assets/vendors/css/img/sos.png"); /* Background pattern from Toptal Subtle Patterns */
@@ -34,46 +22,56 @@ body {
 }
 
 /* ------------------------------------------------------ */
-/* REUSABLE COMPONENTS */
+/* REUSABLE COMPONENTS*/
 /* ------------------------------------------------------ */
+.body-library {
+  h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 40px 0 20px 200px;
+    float: left;
+    color: #000;
+  }
 
-h1 {
-  font-weight: 300;
-  text-transform: uppercase;
-  margin: 40px 0 20px 200px;
-  float: left;
-  color: #000;
+  h2:after {
+    display: block;
+    height: 2px;
+    background-color: #1e88e5;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 120%;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1.5%;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 180%;
+    color: #000;
+  }
+
+  .logo a:link,
+  .logo a:visited {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .logo a:hover,
+  .logo a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+  }
 }
 
-h2 {
-  text-align: center;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 170%;
-  word-spacing: 2px;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
-h2:after {
-  display: block;
-  height: 2px;
-  background-color: #1e88e5;
-  content: " ";
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-h3 {
-  font-size: 120%;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin-bottom: 1.5%;
-  text-align: center;
-}
-
-section {
+.section-library {
   padding: 20px 0;
 }
 
@@ -111,7 +109,8 @@ a:active {
 
 .btn:link,
 .btn:visited,
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -122,7 +121,8 @@ input[type="submit"] {
 
 .btn-full:link,
 .btn-full:visited,
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   background-color: #1e88e5;
   border: 1px solid #1e88e5;
   color: #fff;
@@ -138,13 +138,16 @@ input[type="submit"] {
 .btn:hover,
 .btn:active,
 input[type="submit"]:hover,
-input[type="submit"]:active {
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
   background-color: #1776ca;
 }
 
 .btn-full:hover,
 .btn-full:active,
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   border: 1px solid #1e88e5;
 }
 
@@ -157,29 +160,6 @@ input[type="submit"] {
 /* ------------------------------------------------------ */
 /* HEADER */
 /* ------------------------------------------------------ */
-
-header {
-  background-color: #fff;
-}
-
-.logo {
-  margin-left: 0;
-  font-size: 180%;
-  color: #000;
-}
-
-.logo a:link,
-.logo a:visited {
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.logo a:hover,
-.logo a:active {
-  color: #555;
-  border-bottom: 1px solid transparent;
-}
 
 .other-nav {
   float: right;
@@ -209,7 +189,7 @@ header {
 }
 
 /* ------------------------------------------------------ */
-/* WISHLIST */
+/* LIBRARY */
 /* ------------------------------------------------------ */
 
 /* ADDING A BOOK */
@@ -222,16 +202,18 @@ form {
   border: 1px solid #ccc;
   border-radius: 1em;
   box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.1);
-  background-color: rgba(10, 86, 153, 0.32);
-  /* background */
+  background-color: rgba(153, 94, 0, 0.21);
+}
+
+form {
   display: block;
   position: relative;
 }
 
-/* background */
+/* BACKGROUND  */
 form::after {
   content: "";
-  background: url("/assets//vendors/css/img/spiration-light.png"); /* Background pattern from Toptal Subtle Patterns */
+  background: url("/assets/vendors/css/img/spiration-light.png"); /* Background pattern from Toptal Subtle Patterns */
   opacity: 1;
   top: 0;
   left: 0;
@@ -242,12 +224,18 @@ form::after {
 }
 
 .section-add_book {
-  padding-bottom: 3%;
+  padding-bottom: 2%;
 }
 
 .adding-book {
   font-weight: 400;
 }
+
+/* TODO: ko klikne na wishlist
+.display {
+    visibility: hidden;
+} 
+*/
 
 input[type="text"],
 textarea[type="message"],
@@ -261,10 +249,96 @@ textarea {
   width: 330px;
 }
 
+/* BUTTON */
+
+.middle {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.library {
+  float: left;
+  margin-top: 6px;
+  padding-left: 41%;
+  font-weight: 400;
+}
+.wishlist {
+  float: right;
+  margin-top: 6px;
+  padding-right: 41%;
+  font-weight: 400;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 /* BOOK DETAILS */
+
 .list-title {
   font-weight: 400;
   margin-bottom: 2.5%;
+}
+
+.book_details-0,
+.book_details-1 {
+  padding-bottom: 2.5%;
 }
 
 .book {
@@ -275,6 +349,10 @@ textarea {
 
   display: flex;
   align-items: stretch;
+}
+
+.clearfix {
+  margin-top: 30px;
 }
 
 .book__main--details {
@@ -324,86 +402,4 @@ textarea {
 
 .icon-book-delete {
   float: right;
-}
-
-/*.icon-book-smaller {
-    font-size: 100%;
-    float: right;
-    padding-top: 15px;
-} */
-
-/* ------------------------------------------------------ */
-/* FOOTER */
-/* ------------------------------------------------------ */
-
-footer {
-  background-color: #333;
-  padding: 50px;
-  font-size: 80%;
-}
-
-.footer-nav {
-  list-style: none;
-  float: left;
-}
-
-.social-links {
-  list-style: none;
-  float: right;
-  font-size: 150%;
-}
-
-.footer-nav li,
-.social-links li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.footer-nav li:last-child,
-.social-links li:last-child {
-  margin-right: 0;
-}
-
-.footer-nav li a:link,
-.footer-nav li a:visited,
-.social-links li a:link,
-.social-links li a:visited {
-  text-decoration: none;
-  border: 0;
-  color: #888;
-  transition: color 0.2s;
-}
-
-.footer-nav li a:hover,
-.footer-nav li a:active {
-  color: #ddd;
-}
-
-.social-links li a:link,
-.social-links li a:visited {
-  font-size: 160%;
-}
-
-.ion-logo-facebook,
-.ion-logo-twitter,
-.ion-logo-instagram {
-  transition: color 0.2s;
-}
-
-.ion-logo-facebook:hover {
-  color: #3b5998;
-}
-
-.ion-logo-twitter:hover {
-  color: #55acee;
-}
-
-.ion-logo-instagram:hover {
-  color: #fccc63;
-}
-
-footer p {
-  color: #888;
-  text-align: center;
-  margin-top: 20px;
 }

@@ -22,7 +22,11 @@ module.exports = {
         to: ""
       },
       {
-        test: /\.html$/,
+        from: Path.resolve(__dirname, "./src/index.css"),
+        to: ""
+      },
+      {
+        test: /(\.html$)|(\.css$)/,
         from: Path.resolve(__dirname, "./src/app/views"),
         to: "app/views"
       }
