@@ -8,9 +8,16 @@
       type="image/ico"
       href="src/assets/resources/img/Google-Noto-Emoji-Objects-62858-closed-book.ico"
     />
-    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
-    <link rel="stylesheet" type="text/css" href="books.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendors/css/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendors/css/grid.css"
+    />
     <link
       rel="icon"
       size="16x16"
@@ -38,7 +45,9 @@
     <header>
       <nav class="row">
         <div>
-          <h1 class="logo"><a href="index.html">Bookshelf</a></h1>
+          <!-- ne dela link :( -->
+          <h1 class="logo"><a href="/src/index.html">Bookshelf</a></h1>
+
           <ul class="other-nav">
             <li><a href="books.html">Books</a></li>
             <li><a href="../library/library.html">My Library</a></li>
@@ -53,8 +62,6 @@
       <section class="section-add_book">
         <h3 class="adding-book">Add a book:</h3>
         <form>
-          <!-- cena, tags, slika, odtrani,  -->
-
           <div class="col span-1-of-2">
             <div class="row">
               <div class="col span-1-of-3">
@@ -238,5 +245,6 @@
         </div>
       </div>
     </footer>
+    <script src="/main.js"></script>
   </body>
 </html>
