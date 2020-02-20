@@ -1,90 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta lang="en" charset="utf-8">
-        <link rel="icon" size="16x16" type="image/ico" href="assets/resources/img/Google-Noto-Emoji-Objects-62858-closed-book.ico">
-        <link rel="stylesheet" type="text/css" href="assets/vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="assets/vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="assets/vendors/css/ionicons.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet"> 
-        <title>Bookshelf</title>
-    </head>
-<body>
+  <head>
+    <meta lang="en" charset="utf-8" />
+    <link
+      rel="icon"
+      size="16x16"
+      type="image/ico"
+      href="assets/resources/img/Google-Noto-Emoji-Objects-62858-closed-book.ico"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendors/css/normalize.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/grid.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendors/css/ionicons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500"
+      rel="stylesheet"
+    />
+    <title>Bookshelf</title>
+  </head>
+  <body>
     <header class="header-on-index">
-        <nav class="row">
-            <div>
-                <h1 class="logo"> BookShelf</h1>
-                <ul class="main-nav">
-                   <li><a href="app/views/library/library.html">My Library</a></li> 
-                    <li><a href="#">Login</a></li>
-                </ul> 
-            </div>
-        </nav>
-        <div class="bookshelf">
-            <h1>Got too many books to find them.<br> Catalog your home library right here in one place. </h1>
-            <a class="btn btn-full" href="#">Start now</a>
-            <a class="btn btn-ghost" href="#">Show me more</a>
+      <nav class="row">
+        <div>
+          <h1 class="logo">BookShelf</h1>
+          <ul class="main-nav">
+            <li><a href="/app/views/library/library.html">My Library</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
         </div>
+      </nav>
+      <div class="bookshelf">
+        <h1>
+          Got too many books to find them.<br />
+          Catalog your home library right here in one place.
+        </h1>
+        <a class="btn btn-full" href="#">Start now</a>
+        <a class="btn btn-ghost" href="#">Show me more</a>
+      </div>
     </header>
-    
+
     <section class="section-offers">
-        <div class="row">
-            <h2>What do we offer</h2>
+      <div class="row">
+        <h2>What do we offer</h2>
+      </div>
+
+      <div class="row">
+        <div class="col span-1-of-3 box">
+          <div class="offer-box">
+            <div>
+              <i class="icon ion-md-list icon-big"></i>
+              <h3>Easy to organize</h3>
+              <p>
+                You can use tags, group or author and much more to organize your
+                books as you want.
+              </p>
+            </div>
+          </div>
         </div>
-        
-        <div class="row">
-            <div class="col span-1-of-3 box">
-                <div class="offer-box">
-                    <div>
-                        <i class="icon ion-md-list icon-big"></i>
-                        <h3>Easy to organize</h3>
-                        <p>You can use tags, group or author and much more to organize your books as you want. </p>
-                    </div>
-                </div>
+        <div class="col span-1-of-3 box">
+          <div class="offer-box">
+            <div>
+              <i class="icon ion-md-pin icon-big"></i>
+              <h3>Find them quickly</h3>
+              <p>
+                You can write location of your book in the house. As in which
+                room exactly it is located.
+              </p>
             </div>
-            <div class="col span-1-of-3 box">
-                <div class="offer-box">
-                    <div>
-                        <i class="icon ion-md-pin icon-big"></i>
-                        <h3>Find them quickly</h3>
-                        <p>You can write location of your book in the house. As in which room exactly it is located.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col span-1-of-3 box">
-                <div class="offer-box">
-                    <div>
-                        <i class="icon ion-md-map icon-big"></i>
-                        <h3>Know where they are</h3>
-                        <p>when you lend your book to someone, you will know to who.</p>
-                    </div>
-                </div>
-                
-            </div>
+          </div>
         </div>
+        <div class="col span-1-of-3 box">
+          <div class="offer-box">
+            <div>
+              <i class="icon ion-md-map icon-big"></i>
+              <h3>Know where they are</h3>
+              <p>when you lend your book to someone, you will know to who.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    
+
     <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#">About us</a></li>
+            <li><a href="app/views/library/library.html">My Library</a></li>
+          </ul>
+        </div>
+        <div class="col span-1-of-2">
+          <ul class="social-links">
+            <li><a href="#"></a><i class="icon ion-logo-facebook"></i></li>
+            <li><a href="#"></a><i class="icon ion-logo-twitter"></i></li>
+            <li><a href="#"></a><i class="icon ion-logo-instagram"></i></li>
+          </ul>
+        </div>
         <div class="row">
-            <div class="col span-1-of-2">
-                <ul class="footer-nav">
-                    <li><a href="#">About us</a></li>
-                    <li><a href="app/views/library/library.html">My Library</a></li> 
-                </ul>
-            </div>
-            <div class="col span-1-of-2">
-               <ul class="social-links">
-                   <li><a href="#"></a><i class="icon ion-logo-facebook"></i></li>
-                   <li><a href="#"></a><i class="icon ion-logo-twitter"></i></li>
-                   <li><a href="#"></a><i class="icon ion-logo-instagram"></i></li>
-                </ul>
-            </div>
-                <div class="row">
-                    <p >Copyright &copy; 2020 by Bookshelf. All rights reserved.</p>
-                </div>
-            </div>
-            
+          <p>Copyright &copy; 2020 by Bookshelf. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
     <script src="main.js"></script>
-</body>
-</html> 
+  </body>
+</html>
