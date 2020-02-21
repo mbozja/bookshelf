@@ -51,5 +51,6 @@ form::after {
 }
 
 .section-add_author {
+  padding-top: 2%;
   padding-bottom: 2%;
 }
