@@ -1,3 +1,55 @@
 body {
   background-color: rgba(0, 255, 128, 0.36);
 }
+
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 1050px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(28, 122, 58, 0.342);
+}
+
+form {
+  display: block;
+  position: relative;
+}
+
+form::after {
+  content: "";
+  background: url("/assets/vendors/css/img/spiration-light.png"); /* Background pattern from Toptal Subtle Patterns */
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* BACKGROUND: https://css-tricks.com/snippets/css/transparent-background-images/ */
+.background {
+  display: block;
+  position: relative;
+}
+
+/* BACKGROUND */
+.background::after {
+  content: "";
+  background: url("/assets/vendors/css/img/sos.png"); /* Background pattern from Toptal Subtle Patterns */
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.section-add_author {
+  padding-bottom: 2%;
+}
