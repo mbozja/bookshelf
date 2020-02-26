@@ -37,7 +37,9 @@
           <h1 class="logo">BookShelf</h1>
           <ul class="main-nav">
             <li><a href="/app/views/library/library.html">My Library</a></li>
-            <li><a href="#">Login</a></li>
+            <li>
+              <a id="button-open-login-popup">Login</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -46,8 +48,10 @@
           Got too many books to find them.<br />
           Catalog your home library right here in one place.
         </h1>
-        <a class="btn btn-full" href="#">Start now</a>
-        <a class="btn btn-ghost" href="#">Show me more</a>
+        <div class="buttons">
+          <a class="btn btn-full" href="#">Start now</a>
+          <a class="btn btn-ghost" href="#">Show me more</a>
+        </div>
       </div>
     </header>
 
@@ -94,13 +98,15 @@
     </section>
 
     <section>
-      <button class="open-button" onclick="openForm()">Open Form</button>
-      <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-          <h1>Login</h1>
-
+      <div class="login-popup" id="popup-login">
+        <form class="form-container" id="formLogin" onsubmit="return false;">
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required />
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="loginEmail"
+            required
+          />
 
           <label for="psw"><b>Password</b></label>
           <input
@@ -110,8 +116,14 @@
             required
           />
 
-          <button type="submit" class="btn">Login</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">
+          <button type="button" class="btn" id="button-make-login">
+            Login
+          </button>
+          <button
+            type="button"
+            class="btn cancel"
+            id="button-close-login-popup"
+          >
             Close
           </button>
         </form>
