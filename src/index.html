@@ -40,6 +40,9 @@
             <li>
               <a id="button-open-login-popup">Login</a>
             </li>
+            <li>
+              <a id="button-open-register-popup">Register</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -108,11 +111,11 @@
             required
           />
 
-          <label for="psw"><b>Password</b></label>
+          <label for="LoginPassword"><b>Password</b></label>
           <input
             type="password"
             placeholder="Enter Password"
-            name="psw"
+            name="loginPassword"
             required
           />
 
@@ -129,7 +132,50 @@
         </form>
       </div>
 
-      <div class="register-form"></div>
+      <div class="register-popup">
+        <form class="form-container" id="popup-register">
+          <label for="firstName">First Name</label>
+          <input type="text" placeholder="Enter First Name" name="fName" />
+
+          <label for="lastName">Last Name</label>
+          <input type="text" placeholder="Enter Last Name" name="lName" />
+
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="registerEmail"
+            required
+          />
+
+          <label for="registerPassword"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="registerPasswordS"
+            required
+          />
+
+          <label for="retypeRegisterPassword"><b> Re-Enter Password</b></label>
+          <input
+            type="password"
+            placeholder="Re-Enter Password"
+            name="retypeRegisterPassword"
+            required
+          />
+
+          <button type="button" class="btn" id="button-make-register">
+            Login
+          </button>
+          <button
+            type="button"
+            class="btn cancel"
+            id="button-close-register-popup"
+          >
+            Close
+          </button>
+        </form>
+      </div>
     </section>
 
     <footer>
