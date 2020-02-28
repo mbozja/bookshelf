@@ -47,7 +47,6 @@ document
   .addEventListener("click", openRegisterForm);
 function openRegisterForm() {
   document.getElementById("popup-register").style.display = "block";
-  console.log("test 111111");
 }
 
 document
@@ -55,10 +54,53 @@ document
   .addEventListener("click", closeRegisterForm);
 function closeRegisterForm() {
   document.getElementById("popup-register").style.display = "none";
-  console.log("test 3333333");
+}
+
+/* GET DATA FROM REGISTER FORM */
+const makeRegister = () => {
+  // Get register form
+  const registerFormElements = document.getElementById("registerForm").elements;
+  console.log("registerFormElements: ", registerFormElements);
+  // Get all the data
+  // first name, last name, email, password, retype password
+  const fName = registerFormElements.namedItem("firstName").value;
+  console.log("first name: ", fName);
+  const lName = registerFormElements.namedItem("lastName").value;
+  console.log("last name: ", lName);
+  const email = registerFormElements.namedItem("registerEmail").value;
+  console.log("email: ", email);
+  const pass = registerFormElements.namedItem("registerPassword").value;
+  console.log("register password: ", pass);
+  const rePass = registerFormElements.namedItem("retypeRegisterPassword").value;
+  console.log("retype password: ", rePass);
+  const passwordOk = checkPassword(pass, rePass);
+  console.log("passwordOk: ", passwordOk);
+};
+// To register
+document
+  .getElementById("button-make-register")
+  .addEventListener("click", makeRegister);
+
+/* CHECK PASSWORD */
+function checkPassword(password1, password2) {
+  // If password not entered
+  if (password1 == "") {
+    alert("Please enter Password");
+    return false;
+  }
+  // If confirm password not entered
+  else if (password2 == "") {
+    alert("Please enter confirm password");
+    return false;
+  }
+  // If Not same return False.
+  else if (password1 != password2) {
+    alert("\nPassword did not match: Please try again...");
+    return false;
+  }
+  return true;
 }
 
 let myVar = "Test text";
 let myVar_2 = "Test text 2";
 console.log(myVar);
-console.log(document.getElementById("popup-login").firstElementChild);
