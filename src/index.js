@@ -81,25 +81,36 @@ document
   .getElementById("button-make-register")
   .addEventListener("click", makeRegister);
 
+/* ----------------------------------------- */
 /* CHECK PASSWORD */
+/* ----------------------------------------- */
 function checkPassword(password1, password2) {
+  // Get dom element for showing register form warning.
+  const warningDomElement = document.getElementById("registerFormWarning");
+  console.log("warningDomElement: ", warningDomElement);
+  // TO NE SME BIT KLE warningDomElement.innerHTML = "Password did not match: Please try again...";
   // If password not entered
   if (password1 == "") {
-    alert("Please enter Password");
+    warningDomElement.innerHTML = "Please enter Password";
     return false;
   }
   // If confirm password not entered
   else if (password2 == "") {
-    alert("Please enter confirm password");
+    warningDomElement.innerHTML = "Please enter confirm password";
     return false;
   }
   // If Not same return False.
   else if (password1 != password2) {
-    alert("\nPassword did not match: Please try again...");
+    warningDomElement.innerHTML = "Password did not match: Please try again...";
     return false;
   }
   return true;
 }
+
+/* ---------------------------------------------------- */
+/* SEND DATA TO API ENDPOINT TO GET ACCESS TOKEN */
+/* ---------------------------------------------------- */
+export default class sendData {}
 
 let myVar = "Test text";
 let myVar_2 = "Test text 2";
