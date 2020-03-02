@@ -1,6 +1,7 @@
 import "./styles.scss";
 
 import Library from "./app/views/library/library";
+import axios from "axios";
 
 Library.init();
 
@@ -106,11 +107,6 @@ function checkPassword(password1, password2) {
   }
   return true;
 }
-
-/* ---------------------------------------------------- */
-/* SEND DATA TO API ENDPOINT TO GET ACCESS TOKEN */
-/* ---------------------------------------------------- */
-export default class sendData {}
 
 let myVar = "Test text";
 let myVar_2 = "Test text 2";
