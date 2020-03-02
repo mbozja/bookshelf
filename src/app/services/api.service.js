@@ -8,22 +8,18 @@ class ApiService {
   /* REGISTER POST */
   RegisterPost(fName, lName, email, pass) {
     axios.post(`${this.API_URL}/auth/register`, {
-      data: {
-        firstName: fName,
-        lastName: lName,
-        email: email,
-        password: pass
-      }
+      firstName: fName,
+      lastName: lName,
+      email: email,
+      password: pass
     });
   }
 
   /* LOGIN POST */
   LoginPost(loginEmail, loginPass) {
     axios.post(`${this.API_URL}/auth/login`, {
-      data: {
-        email: loginEmail,
-        password: loginPass
-      }
+      email: loginEmail,
+      password: loginPass
     });
   }
 }
