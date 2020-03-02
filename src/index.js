@@ -1,14 +1,10 @@
 import "./styles.scss";
-
-import Library from "./app/views/library/library";
-import axios from "axios";
-
-Library.init();
+import apiService from "./app/services/api.service";
 
 /* ----------------------------------------- */
 // LOGIN POPUP
 /* ----------------------------------------- */
-/* FOR OPENING AND CLOSING LOGIN FORM */
+// FOR OPENING AND CLOSING LOGIN FORM
 document
   .getElementById("button-open-login-popup")
   .addEventListener("click", openLoginForm);
@@ -42,7 +38,7 @@ document
 /* ----------------------------------------- */
 // REGISTER POPUP
 /* ----------------------------------------- */
-/* FOR OPENING AND CLOSING REGISTER FORM */
+// FOR OPENING AND CLOSING REGISTER FORM
 document
   .getElementById("button-open-register-popup")
   .addEventListener("click", openRegisterForm);
@@ -58,12 +54,11 @@ function closeRegisterForm() {
 }
 
 /* GET DATA FROM REGISTER FORM */
-const makeRegister = () => {
+function makeRegister() {
   // Get register form
   const registerFormElements = document.getElementById("registerForm").elements;
   console.log("registerFormElements: ", registerFormElements);
   // Get all the data
-  // first name, last name, email, password, retype password
   const fName = registerFormElements.namedItem("firstName").value;
   console.log("first name: ", fName);
   const lName = registerFormElements.namedItem("lastName").value;
@@ -76,7 +71,12 @@ const makeRegister = () => {
   console.log("retype password: ", rePass);
   const passwordOk = checkPassword(pass, rePass);
   console.log("passwordOk: ", passwordOk);
-};
+
+  if (passwordOk) {
+    // Call api end point, on ApiService, to make registration.
+    apiService.RegisterPost(fName, lName, email, pass);
+  }
+}
 // To register
 document
   .getElementById("button-make-register")
@@ -89,7 +89,6 @@ function checkPassword(password1, password2) {
   // Get dom element for showing register form warning.
   const warningDomElement = document.getElementById("registerFormWarning");
   console.log("warningDomElement: ", warningDomElement);
-  // TO NE SME BIT KLE warningDomElement.innerHTML = "Password did not match: Please try again...";
   // If password not entered
   if (password1 == "") {
     warningDomElement.innerHTML = "Please enter Password";
@@ -102,12 +101,9 @@ function checkPassword(password1, password2) {
   }
   // If Not same return False.
   else if (password1 != password2) {
+    // If passwords are not same, we show this
     warningDomElement.innerHTML = "Password did not match: Please try again...";
     return false;
   }
   return true;
 }
-
-let myVar = "Test text";
-let myVar_2 = "Test text 2";
-console.log(myVar);

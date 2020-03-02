@@ -1,16 +1,32 @@
-export const getBooks = () => {
-  return "should get books";
-};
+import axios from "axios";
 
-/* ---------------------------------------------------- */
-/* SEND DATA TO API ENDPOINT TO GET ACCESS TOKEN */
-/* ---------------------------------------------------- */
-axios.post("http://localhost:3000/auth/register", {
-  data: {
-    firstName: fName,
-    lastName: lName,
-    email: email,
-    password: pass,
-    retypePassword: rePass
+// For exporting methods at the same time
+class ApiService {
+  constructor() {
+    this.API_URL = "http://localhost:3000";
   }
-});
+  /* REGISTER POST */
+  RegisterPost(fName, lName, email, pass) {
+    axios.post(`${this.API_URL}/auth/register`, {
+      data: {
+        firstName: fName,
+        lastName: lName,
+        email: email,
+        password: pass
+      }
+    });
+  }
+
+  /* LOGIN POST */
+  LoginPost(loginEmail, loginPass) {
+    axios.post(`${this.API_URL}/auth/login`, {
+      data: {
+        email: loginEmail,
+        password: loginPass
+      }
+    });
+  }
+}
+
+const apiService = new ApiService();
+export default apiService;

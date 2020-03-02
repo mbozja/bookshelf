@@ -1,8 +1,8 @@
-import { getBooks } from "../../services/api.service";
+import { apiService } from "../../services/api.service";
 
 const Library = {
   init: () => {
-    console.log("klic getBooks: ", getBooks());
+    //console.log("klic getBooks: ", getBooks());
   }
 };
 
