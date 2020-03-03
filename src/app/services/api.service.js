@@ -7,7 +7,7 @@ class ApiService {
   }
   /* REGISTER POST */
   RegisterPost(fName, lName, email, pass) {
-    axios.post(`${this.API_URL}/auth/register`, {
+    return axios.post(`${this.API_URL}/auth/register`, {
       firstName: fName,
       lastName: lName,
       email: email,
@@ -17,7 +17,7 @@ class ApiService {
 
   /* LOGIN POST */
   LoginPost(loginEmail, loginPass) {
-    axios.post(`${this.API_URL}/auth/login`, {
+    return axios.post(`${this.API_URL}/auth/login`, {
       email: loginEmail,
       password: loginPass
     });
