@@ -2,7 +2,7 @@ import "./styles.scss";
 import apiService from "./app/services/api.service";
 
 /* ----------------------------------------- */
-// LOGIN POPUP
+/*  LOGIN POPUP */
 /* ----------------------------------------- */
 // FOR OPENING AND CLOSING LOGIN FORM
 document
@@ -21,6 +21,11 @@ function closeLoginForm() {
 
 /* GET DATA FROM LOGIN FORM */
 const makeLogin = () => {
+  // Get loginFormWarning element
+  const warningDomElement = document.getElementById("loginFormWarning");
+  // Set empty text in loginFormWarning element
+  warningDomElement = "";
+
   // Get login form
   let loginFormElements = document.getElementById("formLogin").elements;
   console.log("loginFormElements:", loginFormElements);
@@ -29,6 +34,27 @@ const makeLogin = () => {
   console.log("loginEmail:", loginEmail);
   let loginPass = loginFormElements.namedItem("loginPassword").value;
   console.log("loginPass:", loginPass);
+
+  // Check that email and password are not empty.
+  if (loginPass == "" || loginEmail == "") {
+    // Show warning.
+    warningDomElement.innerHTML = "Please enter your login data.";
+    return;
+  }
+
+  apiService
+    .LoginPost(loginEmail, loginPass)
+    .then(response => {
+      // TODO store access-token into local storage
+      console.log("LoginPost response: ", response);
+    })
+    .catch(error => {
+      // We got error when trying to make login. So we have to show warning.
+      // Show warning in login form "Please check your login data."
+      console.log("LoginPost got error: ", error);
+      warningDomElement.innerHTML = "Please check your login data.";
+      return;
+    });
 };
 // To login
 document
@@ -36,7 +62,7 @@ document
   .addEventListener("click", makeLogin);
 
 /* ----------------------------------------- */
-// REGISTER POPUP
+/* REGISTER POPUP */
 /* ----------------------------------------- */
 // FOR OPENING AND CLOSING REGISTER FORM
 document
@@ -74,7 +100,14 @@ function makeRegister() {
 
   if (passwordOk) {
     // Call api end point, on ApiService, to make registration.
-    apiService.RegisterPost(fName, lName, email, pass);
+    apiService
+      .RegisterPost(fName, lName, email, pass)
+      .then(response => {
+        console.log("RegisterPost response", response);
+      })
+      .catch(error => {
+        console.log("RegisterPost got error", error);
+      });
   }
 }
 // To register
@@ -85,6 +118,7 @@ document
 /* ----------------------------------------- */
 /* CHECK PASSWORD */
 /* ----------------------------------------- */
+// Check if register passwors are equal
 function checkPassword(password1, password2) {
   // Get dom element for showing register form warning.
   const warningDomElement = document.getElementById("registerFormWarning");
