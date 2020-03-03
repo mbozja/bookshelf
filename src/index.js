@@ -45,7 +45,9 @@ const makeLogin = () => {
   apiService
     .LoginPost(loginEmail, loginPass)
     .then(response => {
-      // TODO store access-token into local storage
+      // Store access-token into local storage
+      // https://stackoverflow.com/questions/27444403/how-to-save-token-to-local-storage
+      window.localStorage.setItem("access_token", token);
       console.log("LoginPost response: ", response);
     })
     .catch(error => {
